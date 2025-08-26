@@ -21,3 +21,4 @@ form.addEventListener('submit', function (e) {
   // Clear form after submission
   form.reset();
 });
+ 
