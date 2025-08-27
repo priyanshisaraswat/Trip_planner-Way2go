@@ -2,65 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Trip Planner</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Way2Go - Trip Planner</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <h1>🌍 Trip Planner</h1>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#modes">Trip Modes</a>
-      <a href="#review">Reviews</a>
-    </nav>
+    <h1>🌍 Way2Go - Trip Planner</h1>
+    <p>Plan your perfect trip with ease!</p>
   </header>
 
-  <!-- Landing Page -->
-  <section id="landing">
-    <h2>Plan Your Perfect Trip</h2>
-    <p>Login or Continue as Guest to get started</p>
-    <button onclick="startPlanner('login')">Login</button>
-    <button onclick="startPlanner('guest')">Continue as Guest</button>
-  </section>
+  <main>
+    <form id="trip-form">
+      <label for="destination">Destination:</label>
+      <input type="text" id="destination" required />
 
-  <!-- Trip Modes -->
-  <section id="modes">
-    <h2>Choose Your Planning Mode</h2>
-    <div class="card">
-      <h3>Mood-Based Planning</h3>
-      <p>Adventure, Spiritual, Romantic, Relaxing</p>
-    </div>
-    <div class="card">
-      <h3>Direct Planning</h3>
-      <p>Set destination, dates, activities manually</p>
-    </div>
-  </section>
+      <label for="start-date">Start Date:</label>
+      <input type="date" id="start-date" required />
 
-  <!-- Features -->
-  <section id="features">
-    <h2>Smart Features</h2>
-    <ul>
-      <li>🌦 Weather integration</li>
-      <li>💰 Budget filtering & expense tracking</li>
-      <li>📅 Itinerary building</li>
-      <li>🗣 Language translator</li>
-      <li>🧳 Packing checklist</li>
-      <li>⭐ Review & rating system</li>
-    </ul>
-  </section>
+      <label for="end-date">End Date:</label>
+      <input type="date" id="end-date" required />
 
-  <!-- Reviews -->
-  <section id="review">
-    <h2>User Reviews</h2>
-    <p>"Great app for stress-free travel!" – Aditi</p>
-    <p>"Loved the mood-based planning feature." – Rohan</p>
-  </section>
+      <button type="submit">Add Trip</button>
+    </form>
 
-  <!-- Footer -->
+    <section id="trip-list">
+      <h2>📝 Planned Trips:</h2>
+      <ul id="trip-items">
+        <!-- Trip items will appear here -->
+      </ul>
+    </section>
+  </main>
+
   <footer>
-    <p>© 2025 Trip Planner | Built with ❤️</p>
+    <p>Made with ❤️ by Priyanshi</p>
   </footer>
 
   <script src="script.js"></script>
